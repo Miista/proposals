@@ -1,7 +1,13 @@
 # Proposal for Nominal & Structural typing in Proton
 
+##### Status: Draft
+##### Submitted: 2016-07-??
+##### Author: Soren Palmund / Miista & jaxrtech
+
+---
+
 Introduction
-============
+------------
 
 This proposal will introduce a mixed type system comprised of nominal and
 structural typing (for giggles let's call it _structu-nominal_).
@@ -17,13 +23,11 @@ This proposal is based on the thoughts by @jaxrtech posted in a Gist
 here: https://gist.github.com/jaxrtech/591555b239a97844183ba48da8d82339
 
 Proposal
-========
+--------
 
-Structu-Nominal Type System
----------------------------
+### Structu-Nominal Type System
 
-Alias
------
+### Alias
 
 In a further effort to deal with global namespace clutter, we propose to
 introduce the concept of type alias.
@@ -61,5 +65,7 @@ We can then use this type in place of `String` as such:
 Now, even if the name of the parameter changes the type makes the function
 declaration self-documenting.
 
-Grammar
-=======
+Implementation
+--------------
+
+### Grammar
