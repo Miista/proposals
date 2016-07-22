@@ -25,5 +25,41 @@ Structu-Nominal Type System
 Alias
 -----
 
+In a further effort to deal with global namespace clutter, we propose to
+introduce the concept of type alias.
+That is, giving an already name type a new name.
+
+The purpose of a type alias is to avoid creating an entirely new type
+when a type exists that would fill the purpose -- but that type is not
+immediately self-documenting.
+
+Assume that type `String` exists, then the following:
+
+    alias Name = String
+
+would make type `Name` an alias for `String` meaning that in places where
+a `Name` is the parameter type `String` would be accepted and vice versa.
+
+Assume the following function:
+
+    function (name: String) { ... }
+
+From the name of the parameter (`name`) it is obvious that type `String`
+is intended to be used for the name.
+If, however, the parameter was called something like `person_directory_parent_guy`
+then it wouldn't be immediately obvious.
+
+This is where the self-documenting part of a type alias comes in.
+Assume now that we create the following type alias:
+
+    alias Name = String
+
+We can then use this type in place of `String` as such:
+
+    function (name: Name) { ... }
+
+Now, even if the name of the parameter changes the type makes the function
+declaration self-documenting.
+
 Grammar
 =======
