@@ -13,6 +13,9 @@ the structure of the types matches.
 Also this proposal will introduce syntax for creating an type alias.
 That is, giving a new name to an already named type.
 
+This proposal is based on the thoughts by @jaxrtech posted in a Gist
+here: https://gist.github.com/jaxrtech/591555b239a97844183ba48da8d82339
+
 Proposal
 ========
 
