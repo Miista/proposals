@@ -1,3 +1,7 @@
+# This specific branch is not intended to be a PR!
+
+---
+
 # Proton programming language proposals 
 
 Here we'll propose and discuss about what should be and what not in the Proton programming language.
