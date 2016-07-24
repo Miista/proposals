@@ -39,6 +39,11 @@ Generics reduce the amount of code that is written for common cases.
 If we choose to have generics in the language, do we then want reified generics?
 That is, to have the type be available at runtime.
 
+#### Variance
+
+We should also think about whether to support co- and contravariance.
+Some languages have only invariant arrays and collections.[^swift-variance]
+
 ### Functional Programming
 
 * Currying
@@ -63,4 +68,4 @@ For instance, `Int` could be a subtype of `Number` such that a function
 could declare to work with just `Number`s.
 
 [^swift-main]: Only the `main.swift` file can contain top-level code
-
+[^swift-variance]: Swift comes to mind here
