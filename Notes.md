@@ -32,8 +32,11 @@ expressions?
 
 ### Generics
 
-Do we want generics in the language? I want generics as they reduce the
-amount of code that is written for common cases.
+Do we want generics in the language?
+Generics reduce the amount of code that is written for common cases.
+
+If we choose to have generics in the language, do we then want reified generics?
+That is, to have the type be available at runtime.
 
 [^swift-main]: Only the `main.swift` file can contain top-level code
 
