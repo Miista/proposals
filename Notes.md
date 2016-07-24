@@ -83,26 +83,25 @@ could declare to work with just `Number`s.
 [^swift-variance]: Swift comes to mind here  
 [^scala-abstract-types-docs]: See [Scala's abstract types][AbstractTypes-Scala]  
 [^ocaml-module-system]: See [OCaml's module system][AbstractTypes-OCaml]  
-[^scala-abstract-types-explained]: See [this StackOverflow question][AbstractTypes-StackOverflow]
-which explains the effective difference between the parameterized generics and
-abstract types in Scala.
+[^scala-abstract-types-explained]:
+  See [this StackOverflow question][AbstractTypes-StackOverflow]
+  which explains the difference between parameterized generics and abstract
+  types in Scala. 
 
-Example from question:  
->
-> ```
-> abstract class Buffer {
->   type T
->   val element: T
-> }
-> ```
->
-> rather that generics, for example,
->
-> ``` 
-> abstract class Buffer[T] {
->   val element: T
-> }
-> ```
+  Example from question quoted below:
+
+  > For example,
+  > 
+  >     abstract class Buffer {
+  >       type T
+  >       val element: T
+  >     }
+  > 
+  > rather that generics, for example,
+  > 
+  >     abstract class Buffer[T] {
+  >       val element: T
+  >     }
 
 
  [AbstractTypes-Scala]: http://docs.scala-lang.org/tutorials/tour/abstract-types.html
