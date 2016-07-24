@@ -1,7 +1,5 @@
 # Notes
 
-## Hey
-
 This is just a list of features/suggestions that should probably
 be considered at some point in the future.
 
@@ -31,6 +29,11 @@ Scoping is partially handled by the expanded `let` expression.
 Do we want to use braces or significant whitespace?
 If we choose to use braces, do we allow optional braces around single-line
 expressions?
+
+### Generics
+
+Do we want generics in the language? I want generics as they reduce the
+amount of code that is written for common cases.
 
 [^swift-main]: Only the `main.swift` file can contain top-level code
 
