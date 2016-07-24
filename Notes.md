@@ -44,6 +44,15 @@ That is, to have the type be available at runtime.
 We should also think about whether to support co- and contravariance.
 Some languages have only invariant arrays and collections.[^swift-variance]
 
+#### Abstract Types
+
+~ @jaxrtech
+
+Instead of making the generics types parameterized, you can treat the generic
+type as a member of the enclosing type.[^scala-abstract-types][^ocaml-module-system]
+
+This effectively avoids dealing with co- and contravariance.[^scala-abstract-types-explained]
+
 ### Functional Programming
 
 * Currying
@@ -67,5 +76,35 @@ subtyping between types.
 For instance, `Int` could be a subtype of `Number` such that a function
 could declare to work with just `Number`s.
 
-[^swift-main]: Only the `main.swift` file can contain top-level code
-[^swift-variance]: Swift comes to mind here
+
+### Footnotes
+
+[^swift-main]: Only the `main.swift` file can contain top-level code   
+[^swift-variance]: Swift comes to mind here  
+[^scala-abstract-types-docs]: See [Scala's abstract types][AbstractTypes-Scala]  
+[^ocaml-module-system]: See [OCaml's module system][AbstractTypes-OCaml]  
+[^scala-abstract-types-explained]: See [this StackOverflow question][AbstractTypes-StackOverflow]
+which explains the effective difference between the parameterized generics and
+abstract types in Scala.
+
+Example from question:  
+>
+> ```
+> abstract class Buffer {
+>   type T
+>   val element: T
+> }
+> ```
+>
+> rather that generics, for example,
+>
+> ``` 
+> abstract class Buffer[T] {
+>   val element: T
+> }
+> ```
+
+
+ [AbstractTypes-Scala]: http://docs.scala-lang.org/tutorials/tour/abstract-types.html
+ [AbstractTypes-StackOverflow]: http://stackoverflow.com/q/1154571/809572
+ [AbstractTypes-OCaml]: https://realworldocaml.org/v1/en/html/functors.html#a-bigger-example-computing-with-intervals
