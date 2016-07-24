@@ -11,7 +11,8 @@ Handling the ABA problem
 
 ### Module system
 
-One way of reducing global namespace cluttering
+One way of reducing global namespace cluttering.
+A module or library system is also a way to group related types.
 
 ### Launching the app
 
