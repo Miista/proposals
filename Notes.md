@@ -44,5 +44,23 @@ That is, to have the type be available at runtime.
 * Currying
 * Partial application
 
+### Documentation (ala Javadoc)
+
+In-language documentation ala Javadoc.
+
+### Overloading
+
+* Method/function overloading
+* Operator overloading (this could turn out nasty unless handled properly)
+
+### Subtyping
+
+Should we go with object-oriented, subtyping through inheritance is probably a must.
+However, even if we do not go with object-oriented, we could still allow
+subtyping between types.
+
+For instance, `Int` could be a subtype of `Number` such that a function
+could declare to work with just `Number`s.
+
 [^swift-main]: Only the `main.swift` file can contain top-level code
 
