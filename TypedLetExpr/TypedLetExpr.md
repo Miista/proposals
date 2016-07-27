@@ -82,6 +82,34 @@ The reason for this is the assumption that the type cast will most often be
 performed on variables introduced in very narrow scopes such as when using
 the `let` expression.
 
+### Summing up
+
+To sum up, I propose that
+
+    let <var> = <other-var> as <type>
+
+be used as type casting construct, and that
+
+    let <var>: <type> = <value>
+
+be used as the way to declare the type for a variable.
+
+The reasoning behind this is that type casting should take second place when
+reading the code.
+When a type cast is performed, it is not the of primary interest; the subsequent
+equation it is used in is.
+Thus putting the type cast at the end of the line allows it to sink into the
+background.
+
+Furthermore when one must declare a type when initializing a variable,
+this is most likely caused by poor type inference.
+If the programmer feels the need to explicitly declare the type, it is
+because he feels the type is important.
+The language should support this by putting the declaration of the type
+very close to the name of the variable and the value of the variable.
+This way the language supports the programmers notion that the declaration of
+the type is equally important as the value of the type.
+
 ## Implementation
 
 ### Grammar
