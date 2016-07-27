@@ -114,6 +114,30 @@ the type is equally important as the value of the type.
 
 ### Grammar
 
+~~~
+let-declaration = "let", variable, "=", value
+variable        = identifier, [ ":", type-name ]
+value           = expression, [ "as", type-name ]
+
+let-type-cast   = let-declaration, type-cast
+type-cast       = "as", type-name
+
+// Below is just the general declaration of identifiers
+identifier      = lowercaseLetter, { lowercaseLetter  }
+type-name       = uppercaseLetter, { anyLetter }
+~~~
+
+The way the grammar is, the type cast will only cast the value to-be-stored
+in the variable and not the variable itself whereas the declaration of type
+will set the type of the variable.
+
+It would seem that the grammar allows any of the following constructs:
+
+* `let a: Int = b as Float`
+* `let a: Int = 0 as Float`
+* `let a = b as Float`
+* `let a = 0 as Float`
+
 This is an optional body. Here you can paste grammar, code and anything
 regarding how to implement your proposal. You can put here as many as
 subsections as needed.
