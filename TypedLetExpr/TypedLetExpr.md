@@ -8,6 +8,11 @@
 
 ## Introduction
 
+Currently, `let` expressions do not allow for declaring the type of the variable
+being initialized.
+This proposal will attempt to fix this by allowing type declaration in `let`
+expressions.
+Furthermore this proposal will also introduce _type casting_ into `let` expressions.
 
 ## Proposal
 
