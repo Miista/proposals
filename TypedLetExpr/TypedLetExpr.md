@@ -137,7 +137,3 @@ It would seem that the grammar allows any of the following constructs:
 * `let a: Int = 0 as Float`
 * `let a = b as Float`
 * `let a = 0 as Float`
-
-This is an optional body. Here you can paste grammar, code and anything
-regarding how to implement your proposal. You can put here as many as
-subsections as needed.
